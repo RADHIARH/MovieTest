@@ -8,7 +8,7 @@ import { filterRange } from "../redux/action";
 import Footer from "./Footer";
 const List = (props) => {
     const state = useSelector((state) => state.handleFavoris);
-    /*Aff movie to favorite */
+    /*Add movie to favorite */
     const dispatch = useDispatch();
     const AddMovie = (data) => {
     dispatch(addToFavoris(data))

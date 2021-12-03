@@ -231,7 +231,7 @@ const handleFavoris = (state = states, action) => {
     case "filtertitle":
       return {
         ...state,
-        filter: state.movies.filter((element) => element.title === titre),
+        filter: state.movies.filter((element) => element.title.toLowerCase().includes(titre.toLowerCase())),
       };
     case "filterall":
       return {
