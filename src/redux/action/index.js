@@ -24,3 +24,9 @@ export const filterRange = (min,max) => {
     val3:max
   };
 };
+export const showdescription = (id) => {
+  return {
+    type: "showdescription",
+    id:id,
+  };
+};

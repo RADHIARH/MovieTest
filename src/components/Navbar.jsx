@@ -10,7 +10,7 @@ const Navbar = () => {
                <NavLink className="navbar-brand fs-2 fw-bold" to="/">
                   My Movies
                </NavLink>
-                  <button
+                    <button
                       className="navbar-toggler"
                       type="button"
                       data-bs-toggle="collapse"
@@ -20,7 +20,7 @@ const Navbar = () => {
                       aria-label="Toggle navigation"
                 >
                       <span className="navbar-toggler-icon"></span>
-                  </button>
+                    </button>
                <div className="collapse navbar-collapse d-flex justify-content-sm-end" id="navbarSupportedContent">
                   <ul className="navbar-nav mb-2 mb-lg-0">
                       <li className="nav-item ms-3 d-flex align-items-center">
@@ -44,6 +44,10 @@ const Navbar = () => {
                          <NavLink className="nav-link fs-4 text-black" to="/about"> About
                          </NavLink>
                      </li>
+                      <li className="nav-item ms-3 d-flex align-items-center">
+                          <NavLink className="nav-link fs-4 text-black "  to="/description">
+                          </NavLink>
+                      </li>
                   </ul>
                </div>
             </div>

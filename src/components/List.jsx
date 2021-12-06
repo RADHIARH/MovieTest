@@ -1,18 +1,16 @@
 import { React } from "react";
 import { useDispatch } from "react-redux";
-import { addToFavoris } from "../redux/action";
 import { filterTitle } from "../redux/action";
 import { useSelector } from "react-redux";
 import { filterAll } from "../redux/action";
 import { filterRange } from "../redux/action";
+import { showdescription } from "../redux/action";
+import { useHistory } from "react-router-dom";
 import Footer from "./Footer";
 const List = (props) => {
     const state = useSelector((state) => state.handleFavoris);
-    /*Add movie to favorite */
+    const history = useHistory();
     const dispatch = useDispatch();
-    const AddMovie = (data) => {
-    dispatch(addToFavoris(data))
-  };
   /* all movies */
   const filterall=()=>{
      dispatch(filterAll());
@@ -24,6 +22,11 @@ const List = (props) => {
 /* filter movies by rating */
   const filterFilmsRate = (min, max) => {
     dispatch(filterRange(min,max))
+  };
+  /* show description and trailer  */
+  const showdes = (id) => {
+    dispatch(showdescription (id))
+     history.push("/description");
   };
 
   const ShowFilms = () => {
@@ -48,55 +51,34 @@ const List = (props) => {
                 </button>
             </div>
         </div>
-        <div className="row">
+        <div className="row m-4">
            { state.filter.length>0 ?(
             state.filter.map((movie, key) => {
             return (
              <>
-                <div className="col" key={key}>
-                    <div
-                    className="image-container d-flex mb-4"
-                    style={{
-                    margin: "auto",
-                    backgroundColor: "#3D3D3D",
-                    width: "600px",
-                    height: "240px",
-                  }}
-                >
-                      <div className="part1 p-2" style={{ width: "400px" }}>
-                          <div className="col">
-                              <div className="row ">
-                              <h3 style={{ color: "white" }}>{movie.title}</h3>
-                              </div>
-                              <div className="row text-danger mb-1">
-                                 <h6><i className="fa fa-star text-danger"></i>{movie.rating}</h6>
-                              </div>
-                              <div className="row text-secondary mb-2">
-                                <h6 style={{ color: "white" }}>{movie.description}</h6>
-                              </div>
-                              <div className="row m-1">
-                               <button
-                               className="btn btn-outline-dark"
-                               onClick={() => AddMovie(movie)} >
-                              <i className="fas fa-plus-circle fa-1x m-2 ">Ajouter à la liste</i>
-                               </button>
-                              </div>
-                          </div>
-                      </div>
-                      <div className="part2 " style={{ width: "50%" }}>
+                <div className="col-md-4 mb-4 " key={key}  onClick={()=>showdes(movie.id)}>
+                
+                     <div className="row">
                           <img
                           src={movie.posterURL}
-                          style={{ width: "280px", height: "240px" }} alt=""></img>
+                          style={{ width: "400px", height: "275px" }} alt=""></img>
                       </div>
-                   </div>
+                      <div className="row" >
+                           <h3 style={{ color: "white" }}>{movie.title}</h3>
+                      </div>
+                      <div className="row text-danger mb-1">
+                                 <h6><i className="fa fa-star text-danger"></i>{movie.rating}</h6>
+                      </div>
                 </div>
+                
         
               </>
           );
-        })):(<div className="display-5 text-center" style={{ color: "white" }}>
-            <p>SORRY...NO RESULTS FOUND </p>
-          </div>) }
-          </div>
+        })):(
+            <div className="display-5 text-center" style={{ color: "white" }}>
+                <p>SORRY...NO RESULTS FOUND </p>
+            </div>) }
+        </div>
       </>
     );
   };
