@@ -277,7 +277,7 @@ const handleFavoris = (state = states, action) => {
     case "showdescription": {
       return {
         ...state,
-        filmtoshow: state.movies.filter((element) => element.id === id),
+        filmtoshow:state.movies.filter((element) => element.id === id),
       };
     }
     default:

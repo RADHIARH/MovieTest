@@ -23,7 +23,7 @@ const ListFavoris = () => {
   };
   return (
     <div>
-        <h3 className="text-center p-5 text-secondary">LISTE DE FAVOURIS</h3>
+        <h3 className="text-center p-5 text-secondary">LISTE DE FAVORIS</h3>
         {state.filmInit.length ? (
           state.filmInit.map(FavorisItems)
         ) : (
