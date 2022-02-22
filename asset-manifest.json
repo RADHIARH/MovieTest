@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/MovieTest/static/css/main.296808b4.chunk.css",
+    "main.js": "/MovieTest/static/js/main.98d4a0de.chunk.js",
+    "main.js.map": "/MovieTest/static/js/main.98d4a0de.chunk.js.map",
+    "runtime-main.js": "/MovieTest/static/js/runtime-main.e3a9b845.js",
+    "runtime-main.js.map": "/MovieTest/static/js/runtime-main.e3a9b845.js.map",
+    "static/css/2.1f0ab66c.chunk.css": "/MovieTest/static/css/2.1f0ab66c.chunk.css",
+    "static/js/2.b2802c9c.chunk.js": "/MovieTest/static/js/2.b2802c9c.chunk.js",
+    "static/js/2.b2802c9c.chunk.js.map": "/MovieTest/static/js/2.b2802c9c.chunk.js.map",
+    "static/js/3.862e4a65.chunk.js": "/MovieTest/static/js/3.862e4a65.chunk.js",
+    "static/js/3.862e4a65.chunk.js.map": "/MovieTest/static/js/3.862e4a65.chunk.js.map",
+    "index.html": "/MovieTest/index.html",
+    "static/css/2.1f0ab66c.chunk.css.map": "/MovieTest/static/css/2.1f0ab66c.chunk.css.map",
+    "static/css/main.296808b4.chunk.css.map": "/MovieTest/static/css/main.296808b4.chunk.css.map",
+    "static/js/2.b2802c9c.chunk.js.LICENSE.txt": "/MovieTest/static/js/2.b2802c9c.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/MovieTest/static/media/fontawesome-webfont.f691f37e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e3a9b845.js",
+    "static/css/2.1f0ab66c.chunk.css",
+    "static/js/2.b2802c9c.chunk.js",
+    "static/css/main.296808b4.chunk.css",
+    "static/js/main.98d4a0de.chunk.js"
+  ]
+}
